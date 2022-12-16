@@ -12,12 +12,16 @@
             <h1 class="alinearTextoCentro">Proyecto final - Coderhouse</h1>
         </header>
 
-        <div id="usuarioContenedor" class="alinearTextoCentro">
+        <div class="loginUsuario">
+            <label for="nombreUsuario">Nombre de Usuario</label>
+            <input type="text" name="nombreUsuario" id="nombreUsuario">
+            <label for="contraseñaUsuario">Contraseña</label>
+            <input type="password" name="contraseñaUsuario" id="contraseñaUsuario">
+            <div class="botonesLogin">
+                <button id="btnAceptar" class="btnLogin" type="submit">Aceptar</button>
+                <button class="btnLogin" type="reset">Cancelar</button>
+            </div>
         </div>
-
-        <h3>Canchas disponibles</h3>
-        <ul id="listaCanchas" class="alinearTextoCentro">
-        </ul>
-        <script src="./js/main.js"></script>
+        <script src="./js/index.js"></script>
     </body>
 </html>

@@ -60,7 +60,9 @@ class Turno {
  * Clase utilizada para representar a un usuario de la aplicacion.
  */
 class Usuario {
-    constructor(nombre, apellido, dni){
+    constructor(nombreDeUsuario, contraseña, nombre, apellido, dni){
+        this.nombreDeUsuario = nombreDeUsuario;
+        this.contraseña = contraseña;
         this.nombre = nombre;
         this.apellido = apellido;
         this.dni = dni;
@@ -277,15 +279,18 @@ function renderizarCanchas(canchas){
     });
 }
 
-// Capturo los datos del usuario.
-usuario = capturarDatosUsuarios();
+// // Capturo los datos del usuario.
+// usuario = capturarDatosUsuarios();
 
-// Renderizo los datos del usuario capturados.
-renderizarDatosUsuario(usuario);
+// // Renderizo los datos del usuario capturados.
+// renderizarDatosUsuario(usuario);
 
-// Genero los horarios.
-horarios = cargarHorarios();
+// // Genero los horarios.
+// horarios = cargarHorarios();
 
-// Cargo las canchas.
-canchas = cargarCanchas(horarios);
-renderizarCanchas(canchas);
+// // Cargo las canchas.
+// canchas = cargarCanchas(horarios);
+// renderizarCanchas(canchas);
+const btnSalirPagina = document.getElementById('btnSalirPagina');
+
+btnSalirPagina.onclick = () => window.location.href = 'http://127.0.0.1:5500/index.html'
