@@ -53,6 +53,6 @@ btnAceptar.onclick = () => {
     let verificado = verificarUsuario(nombreUsuarioValue, contraseñaUsuarioValue)
 
     if (verificado) {
-        window.location.href = 'http://127.0.0.1:5500/pages/main.html'
+        window.location.href = './pages/main.html'
     }
 }

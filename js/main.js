@@ -98,9 +98,17 @@ function capturarDatosUsuarios(){
  * 
  * @param {Usuario} usuario 
  */
-function renderizarDatosUsuario(usuario){
+function renderizarDatosUsuario(){
     // Capturo el elemento contenedor.
     let contenedor = document.getElementById('usuarioContenedor');
+    let usuarioParseado = JSON.parse(localStorage.getItem('user1'), );
+    let usuario = new Usuario(
+        usuarioParseado.nombreDeUsuario,
+        usuarioParseado.contraseña,
+        usuarioParseado.nombre,
+        usuarioParseado.apellido,
+        usuarioParseado.dni);
+
     contenedor.innerHTML = `
         <h2>BIENVENIDO</h2>
         <h3>${usuario.getNombreCompleto()}</h3>`
@@ -279,18 +287,15 @@ function renderizarCanchas(canchas){
     });
 }
 
-// // Capturo los datos del usuario.
-// usuario = capturarDatosUsuarios();
+// Renderizo los datos del usuario capturados.
+renderizarDatosUsuario(usuario);
 
-// // Renderizo los datos del usuario capturados.
-// renderizarDatosUsuario(usuario);
+// Genero los horarios.
+horarios = cargarHorarios();
 
-// // Genero los horarios.
-// horarios = cargarHorarios();
-
-// // Cargo las canchas.
-// canchas = cargarCanchas(horarios);
-// renderizarCanchas(canchas);
+// Cargo las canchas.
+canchas = cargarCanchas(horarios);
+renderizarCanchas(canchas);
 const btnSalirPagina = document.getElementById('btnSalirPagina');
 
-btnSalirPagina.onclick = () => window.location.href = 'http://127.0.0.1:5500/index.html'
+btnSalirPagina.onclick = () => window.location.href = '../index.html'
