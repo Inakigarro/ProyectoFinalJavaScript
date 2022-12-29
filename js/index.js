@@ -40,16 +40,17 @@ function verificarUsuario(nombreUsuario, contraseña){
             verificationContraseñaUsuario = true;
         }
         index++;
-    } while (!verificationNombreUsuario && !verificationContraseñaUsuario && index < localStorage.length);
+    } while ((!verificationNombreUsuario || !verificationContraseñaUsuario) && index < localStorage.length);
 
     return verificationNombreUsuario && verificationContraseñaUsuario
 }
 
 for (let index = 0; index < 10; index++) {
-    let user = new Usuario(`user${index}`, '123', `user${index}`, index)
+    let user = new Usuario(`user${index}`, '123', `user${index}`,'sarasa', index);
+    localStorage.setItem(`user${index}`, JSON.stringify(user));
 }
 const user1 = new Usuario('kaky', '123', 'Iñaki', 'Garro', '1')
-localStorage.setItem('user1', JSON.stringify(user1));
+localStorage.setItem('admin', JSON.stringify(user1));
 
 const nombreUsuarioInput = document.getElementById('nombreUsuario');
 const contrasñaUsuarioInput = document.getElementById('contraseñaUsuario');
