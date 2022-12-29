@@ -101,7 +101,7 @@ function capturarDatosUsuarios(){
 function renderizarDatosUsuario(){
     // Capturo el elemento contenedor.
     let contenedor = document.getElementById('usuarioContenedor');
-    let usuarioParseado = JSON.parse(localStorage.getItem('user1'), );
+    let usuarioParseado = JSON.parse(localStorage.getItem('currentUser'), );
     let usuario = new Usuario(
         usuarioParseado.nombreDeUsuario,
         usuarioParseado.contraseña,

@@ -42,11 +42,14 @@ function verificarUsuario(nombreUsuario, contraseña){
         index++;
     } while ((!verificationNombreUsuario || !verificationContraseñaUsuario) && index < localStorage.length);
 
+    if (verificationNombreUsuario && verificationContraseñaUsuario){
+        localStorage.setItem('currentUser', JSON.stringify(usuarioActual));
+    }
     return verificationNombreUsuario && verificationContraseñaUsuario
 }
 
 for (let index = 0; index < 10; index++) {
-    let user = new Usuario(`user${index}`, '123', `user${index}`,'sarasa', index);
+    let user = new Usuario(`user${index}`, '123', `user${index}`, `test${index}`, index);
     localStorage.setItem(`user${index}`, JSON.stringify(user));
 }
 const user1 = new Usuario('kaky', '123', 'Iñaki', 'Garro', '1')
