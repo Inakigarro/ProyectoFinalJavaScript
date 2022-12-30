@@ -233,6 +233,7 @@ function cargarCanchas(horariosDisponibles){
 
 function renderizarListaInterna(idCancha, horarios){
     let listaHorarios = document.createElement('ul');
+    listaHorarios.classList.add('list-group', 'list-group-flush');
     listaHorarios.id = 'listHorTemp';
 
     horarios.forEach(horario => {
@@ -242,18 +243,35 @@ function renderizarListaInterna(idCancha, horarios){
         // Si existe, Agrego el horario a la lista.
         if (listaHoras){
             let nodoHora = document.createElement('li');
+            nodoHora.classList.add('list-group-item', 'botonHora');
             nodoHora.innerText = `${horario.horaInicio} - ${horario.horaFin}`
+            nodoHora.onclick = () => {
+                if (nodoHora.classList.contains('deshabilitado')){
+                    nodoHora.classList.remove('deshabilitado');
+                } else {
+                    nodoHora.classList.add('deshabilitado');
+                }
+            }
             listaHoras.appendChild(nodoHora);
         } else {
             // Si no existe, significa que el nodo del dia no fue creado aun.
             // Por lo tanto, creo el nodo dia, creo la lista de horarios del dia.
             // y agrego el primer horario.
             let nodoDia = document.createElement('li');
-            nodoDia.innerHTML = `<h5>${horario.dia}</h5>`;
+            nodoDia.innerHTML = `<h5 class="card-header">${horario.dia}</h5>`;
             listaHoras = document.createElement('ul');
             listaHoras.id = `cancha${idCancha}${horario.dia}`;
+            listaHoras.classList.add('list-group', 'list-group-flush');
             let nodoHora = document.createElement('li');
+            nodoHora.classList.add('list-group-item', 'botonHora');
             nodoHora.innerText = `${horario.horaInicio} - ${horario.horaFin}`
+            nodoHora.onclick = () => {
+                if (nodoHora.classList.contains('deshabilitado')){
+                    nodoHora.classList.remove('deshabilitado');
+                } else {
+                    nodoHora.classList.add('deshabilitado');
+                }
+            }
             listaHoras.appendChild(nodoHora);
             nodoDia.appendChild(listaHoras);
             listaHorarios.appendChild(nodoDia);
@@ -276,9 +294,12 @@ function renderizarCanchas(canchas){
     // Armo la lista de canchas.
     canchas.forEach(cancha => {
         let nodo = document.createElement('li');
-        nodo.id = `cancha${cancha.id}`
+        nodo.id = `cancha${cancha.id}`;
+        nodo.classList.add('card');
         nodo.innerHTML = `
-        <h4>${cancha.getNombreCancha()}</h4>
+            <div id="body-cancha${cancha.id}" class="card-body">
+                <h4 class="card-title">${cancha.getNombreCancha()}</h4>
+            </div>
         `;
         let listaHorariosCancha = renderizarListaInterna(cancha.id, cancha.horariosDisponibles);
         nodo.appendChild(listaHorariosCancha);

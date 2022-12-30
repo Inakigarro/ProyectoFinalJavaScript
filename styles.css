@@ -43,31 +43,9 @@
     border-radius: 15px;
     list-style: none;
 }
-#listaCanchas > li > h4 {
-    background-color: rgb(92, 235, 245);
-    border-bottom: 1px solid black;
-    border-radius: 20px;
-}
-#listaCanchas > li > ul {
+#listaCanchas > li > ul > li{
     padding: 0;
     list-style: none;
-}
-#listaCanchas > li > ul > li {
-    list-style: none;
-}
-#listaCanchas > li > ul > li > h5 {
-    background-color: rgb(245, 155, 92);
-    border-bottom: 1px solid black;
-    border-radius: 15px;
-}
-#listaCanchas > li > ul > li > ul {
-    padding: 0;
-    list-style: none;
-}
-#listaCanchas > li > ul > li > ul > li {
-    border-bottom: 1px solid black;
-    border-radius: 15px;
-    background-color: coral;
 }
 
 /* Login */
@@ -86,4 +64,15 @@
 .btnLogin{
     width: 40%;
     background-color: rgb(82, 142, 199);
+}
+
+.botonHora {
+    cursor: pointer;
+}
+.botonHora:hover {
+    background-color: aquamarine;
+}
+.deshabilitado {
+    background-color: rgb(155, 155, 155) !important;
+    text-decoration: line-through !important;
 }
