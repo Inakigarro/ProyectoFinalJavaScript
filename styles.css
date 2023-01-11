@@ -17,6 +17,17 @@
     width: fit-content;
     height: auto;
 }
+.perfil {
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.perfil .nombreUsuario {
+    margin: 0;
+}
 
 .tituloPagina{
     width: auto;

@@ -1,3 +1,4 @@
+
 /**
  * Clase utilizada para representar a un usuario de la aplicacion.
  */
@@ -66,8 +67,25 @@ btnAceptar.onclick = () => {
     let verificado = verificarUsuario(nombreUsuarioValue, contraseñaUsuarioValue)
 
     if (verificado) {
-        window.location.href = '/pages/main.html'
+        Swal.fire({
+            toast: true,
+            position: 'top-end',
+            text: 'Redireccionando...',
+            icon: 'success',
+            timer: 3000,
+            timerProgressBar: true,
+            showConfirmButton: false,
+            theme: 'dark'
+        });
+        setTimeout(() => window.location.href = '/pages/main.html', 3000);
+        
     } else {
+        Swal.fire({
+            title: 'Usuario incorrecto',
+            text: 'El usuario o la contraseña ingresada no son corretos.',
+            icon: 'error',
+            confirmationButonText: 'Ok'
+        });
         nombreUsuarioInput.value = '';
         contrasñaUsuarioInput.value = '';
     }
