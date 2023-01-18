@@ -25,6 +25,10 @@
     align-items: center;
 }
 
+#perfil-notificaciones {
+    width: fit-content;
+}
+
 .perfil .nombreUsuario {
     margin: 0;
 }
@@ -40,6 +44,9 @@
 
 .alinearTextoCentro{
     text-align: center;
+}
+.badge-size {
+    font-size: small !important;
 }
 
 #listaCanchas{

@@ -1,0 +1,51 @@
+[
+    {
+        "nombreDeUsuario": "admin",
+        "contraseña": "admin",
+        "nombre": "admin",
+        "apellido": "admin",
+        "dni": 0
+    },
+    {
+        "nombreDeUsuario":"kaky",
+        "contraseña":"123",
+        "nombre":"Iñaki",
+        "apellido":"Garro",
+        "dni":"1"
+    },
+    {
+        "nombreDeUsuario":"user0",
+        "contraseña":"123",
+        "nombre":"user0",
+        "apellido":"test0",
+        "dni":1
+    },
+    {
+        "nombreDeUsuario":"user1",
+        "contraseña":"123",
+        "nombre":"user1",
+        "apellido":"test1",
+        "dni":2
+    },
+    {
+        "nombreDeUsuario":"user2",
+        "contraseña":"123",
+        "nombre":"user2",
+        "apellido":"test2",
+        "dni":3
+    },
+    {
+        "nombreDeUsuario":"user3",
+        "contraseña":"123",
+        "nombre":"user3",
+        "apellido":"test3",
+        "dni":4
+    },
+    {
+        "nombreDeUsuario":"user5",
+        "contraseña":"123",
+        "nombre":"user5",
+        "apellido":"test5",
+        "dni":5
+    }
+]
