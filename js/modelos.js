@@ -50,6 +50,13 @@ class Horario {
  * Clase utilizada para representar un turno en una cancha y en un horario especifico.
  */
 class Turno {
+    /**
+     * 
+     * @param {number} id 
+     * @param {Cancha} cancha 
+     * @param {Horario} horario 
+     * @param {Usuario} usuario 
+     */
     constructor(id, cancha, horario, usuario){
         this.id = id;
         this.cancha = cancha;

@@ -12,6 +12,15 @@
     justify-content: space-between;
 }
 
+.reservas {
+    overflow-y: scroll;
+    list-style: none;
+    max-height: 20vh;
+}
+.contenidoCarta {
+    font-size: x-small;
+}
+
 .separador{
     display: inline-block;
     width: fit-content;
